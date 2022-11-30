@@ -1,5 +1,6 @@
 # subgenome
-Identification of druggable genes in pathogenic bacteria – subtractive genomics approach
+A streamlined pipeline for subtractive genomics approach can accelerate the in-silico drug target identification
+
 
 ## Installation
 conda-env create -n subgenome -f environment.yml
