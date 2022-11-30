@@ -6,38 +6,38 @@ b1=str(sys.argv[2])
 
 dbpath=b1+"/"
 
-os.system("cut -d ' ' -f1 "+bact+" > bacteria.fa")
+#os.system("cut -d ' ' -f1 "+bact+" > bacteria.fa")
 
-os.system("cd-hit -i bacteria.fa -c 0.9 -o non-redundant.fa")
-os.system("grep '>' non-redundant.fa | sed 's/>//g' | sort > allseq.txt")
+#os.system("cd-hit -i bacteria.fa -c 0.9 -o non-redundant.fa")
+#os.system("grep '>' non-redundant.fa | sed 's/>//g' | sort > allseq.txt")
 
-os.system("blastp -query non-redundant.fa -db "+dbpath+"humandb -out humanblast_out -outfmt 6 -evalue 1e-5")
+#os.system("blastp -query non-redundant.fa -db "+dbpath+"humandb -out humanblast_out -outfmt 6 -evalue 1e-5")
 
-os.system("cut -f1 bacteria.fa humanblast_out | sort -u  > humanblast_out_sorted.txt")
+#os.system("cut -f1 humanblast_out | sort -u  > humanblast_out_sorted.txt")
 
-os.system("comm -23 allseq.txt humanblast_sorted.txt | sort > nonhuman.txt")
+#os.system("comm -23 allseq.txt humanblast_out_sorted.txt  | sort > nonhuman.txt")
  
-os.system("seqtk subseq  nonhuman.txt > g1.fa")
+#os.system("seqtk subseq bacteria.fa nonhuman.txt > g1.fa")
 
-os.system("blastp -query g1.fa -db "+dbpath+"antitargetsdb -out anti_out -outfmt 6 -evalue 0.005  -qcov_hsp_perc 30")
+#os.system("blastp -query g1.fa -db "+dbpath+"antitargetsdb -out anti_out -outfmt 6 -evalue 0.005  -qcov_hsp_perc 30")
 
-os.system("cut -f1 anti_out | sort -u  > anti_out_sorted.txt")
+#os.system("cut -f1 anti_out | sort -u  > anti_out_sorted.txt")
 
-os.system("comm -23 nonhuman.txt anti_out_sorted.txt > nonhuman1.txt")
+#os.system("comm -23 nonhuman.txt anti_out_sorted.txt > nonhuman1.txt")
  
-os.system("seqtk subseq g1.fa nonhuman1.txt > g2.fa")
+#os.system("seqtk subseq g1.fa nonhuman1.txt > g2.fa")
 
-os.system("blastp -query g2.fa -db "+dbpath+"degdb -out deg_out -outfmt 6 -evalue 1e-100")
+#os.system("blastp -query g2.fa -db "+dbpath+"degdb -out deg_out -outfmt 6 -evalue 1e-100")
 
-os.system("cut -f1 deg_out | sort -u  > deg_out_sorted.txt")
+#os.system("cut -f1 deg_out | sort -u  > deg_out_sorted.txt")
 
-os.system("seqtk subseq g2.fa essential_genes.txt > essential_genes.fa")
+#os.system("seqtk subseq g2.fa deg_out_sorted.txt > essential_genes.fa")
 
-os.system("blastp -query essential_genes.fa -db "+dbpath+"vfdb -out vfdb_out -outfmt 6 -evalue 1e-100")
+#os.system("blastp -query essential_genes.fa -db "+dbpath+"vfdb -out vfdb_out -outfmt 6 -evalue 1e-100")
 
-os.system("cut -f1 vfdb_out | sort -u  > vfdb_out_sorted.txt")
+#os.system("cut -f1 vfdb_out | sort -u  > vfdb_out_sorted.txt")
 
-os.system("seqtk subseq essential_genes.fa vfdb_out_sorted.txt > vf_genes.fa")
+#os.system("seqtk subseq essential_genes.fa vfdb_out_sorted.txt > vf_genes.fa")
 
 os.system("blastp -query vf_genes.fa -db "+dbpath+"antires -out anti_res.out -outfmt 6 -evalue 1e-100")
 
