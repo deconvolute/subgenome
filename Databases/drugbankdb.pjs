@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "drugbankdb",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "drugbank_seq.fasta",
+  "number-of-letters": 2880889,
+  "number-of-sequences": 5290,
+  "last-updated": "2022-11-29T18:43:00",
+  "number-of-volumes": 1,
+  "bytes-total": 3881376,
+  "bytes-to-cache": 2928604,
+  "files": [
+    "drugbankdb.pdb",
+    "drugbankdb.phr",
+    "drugbankdb.pin",
+    "drugbankdb.pot",
+    "drugbankdb.psq",
+    "drugbankdb.ptf",
+    "drugbankdb.pto"
+  ]
+}

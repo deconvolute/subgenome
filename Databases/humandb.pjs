@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "humandb",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "Human_proteome.fa",
+  "number-of-letters": 28952960,
+  "number-of-sequences": 80581,
+  "last-updated": "2022-11-28T21:01:00",
+  "number-of-volumes": 1,
+  "bytes-total": 44699513,
+  "bytes-to-cache": 29678294,
+  "files": [
+    "humandb.pdb",
+    "humandb.phr",
+    "humandb.pin",
+    "humandb.pot",
+    "humandb.psq",
+    "humandb.ptf",
+    "humandb.pto"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "antires",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "nucleotide_fasta_protein_homolog_model.fasta",
+  "number-of-letters": 4461765,
+  "number-of-sequences": 4661,
+  "last-updated": "2022-11-29T21:21:00",
+  "number-of-volumes": 1,
+  "bytes-total": 5245465,
+  "bytes-to-cache": 4503843,
+  "files": [
+    "antires.pdb",
+    "antires.phr",
+    "antires.pin",
+    "antires.pot",
+    "antires.psq",
+    "antires.ptf",
+    "antires.pto"
+  ]
+}

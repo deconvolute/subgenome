@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "degdb",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "DEG10.aa",
+  "number-of-letters": 8908598,
+  "number-of-sequences": 26619,
+  "last-updated": "2022-11-29T05:32:00",
+  "number-of-volumes": 1,
+  "bytes-total": 11607335,
+  "bytes-to-cache": 9148258,
+  "files": [
+    "degdb.pdb",
+    "degdb.phr",
+    "degdb.pin",
+    "degdb.pot",
+    "degdb.psq",
+    "degdb.ptf",
+    "degdb.pto"
+  ]
+}
