@@ -1,5 +1,5 @@
 # subgenome
-A streamlined pipeline for subtractive genomics approach can accelerate the in-silico drug target identification
+A streamlined pipeline for subtractive genomics approach to aid in-silico drug target identification
 
 
 ## Installation
