@@ -1,4 +1,4 @@
-# subgenome
+# Subgenome
 A streamlined pipeline for subtractive genomics approach to aid in-silico drug target identification
 
 
